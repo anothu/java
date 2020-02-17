@@ -1,0 +1,20 @@
+import java.net*;
+import java.io.*;
+public class GreetingServer extends Thread
+{
+
+    public static void main(String[] args) {
+        String serverName = args[0];
+        int port = Integer.parseInt(arg[1]);
+        try{
+            System.out.println("link to : " + serverName + "number : " + port);
+            Socket client = new Socket(serverName, port);
+            System.out.println("address : " + client.getRemo);
+        }catch ()
+        System.out.println();
+    }
+fileout
+
+
+}
+}
