@@ -1,0 +1,17 @@
+server:
+  port: 7001
+  
+eureka: 
+  instance:
+    #hosts中已经将其映射为localhost
+    hostname: eureka7001.com
+  client:
+    #能注册自己吗
+    register-with-eureka: false
+    #fetch-registry中false代表是注册中心
+    fetch-registry: false
+    service-url:
+      #单机模式
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      #集群模式：各个注册中心相互相互注册（同一家服装店开分公司）
+      #defaultZone: http://eureka7002.com:7002/eureka/

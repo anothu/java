@@ -1,0 +1,30 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: cloud-payment-hystrix-service
+#  datasource: 
+#    type: com.alibaba.druid.pool.DruidDataSource
+#    driver-class-name: org.gjt.mm.mysql.Driver
+#    url: jdbc:mysql://127.0.0.1:3306/db2020?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+#    username: root
+#    password: 123456
+#mybatis:
+#  mapper-locations: classpath:/
+#  type-aliases-package: com.atguigu.springcloud.entities
+##############eureka############################
+eureka: 
+  client:
+    #将自己注册到eureka(是否注册)
+    register-with-eureka: true
+    #集群必须设置为true配合负载均衡
+    fetch-registry: true
+    service-url: 
+      #查询注册服务均需要这个地址
+      #单机
+      defaultZone: http://localhost:7001/eureka
+      #集群
+      #defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka
+################################################
+      
+      

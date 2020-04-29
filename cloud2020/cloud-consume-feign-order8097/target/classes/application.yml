@@ -1,0 +1,20 @@
+server: 
+  port: 8097
+spring:
+  application:
+    name: cloud-order-service
+##############eureka############################
+eureka: 
+  client:
+    #将自己注册到eureka（是否注册）
+    register-with-eureka: true
+    #集群必须设置为true配合ribbon负载均衡
+    fetch-registry: true
+    service-url:
+      #单机：查询注册服务均需要这个地址
+      #defaultZone: http://localhost:7001/eureka
+      #集群：通过这两个服装店都能买衣服
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/
+      
+################################################
+      
